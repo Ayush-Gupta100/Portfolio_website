@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f2027;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #203a43;
+      padding: 20px 0;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s forwards;
+    }
+
+    .about { animation-delay: 0.2s; }
+    .skills { animation-delay: 0.4s; }
+    .projects { animation-delay: 0.6s; }
+    .contact { animation-delay: 0.8s; }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ff6b6b;
+    }
+
+    .project {
+      background: #2c5364;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list div {
+      background: #2c5364;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .skills-list div:hover {
+      background: #3e6b84;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      transition: background 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+    }
+
+    form input[type="submit"] {
+      background: #ff6b6b;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    form input[type="submit"]:hover {
+      background: #ff3b3b;
+    }
+
+    footer {
+      background: #203a43;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate and curious tech enthusiast with a strong foundation in Python and Machine Learning.
+      My expertise spans from building intelligent models using <strong>scikit-learn</strong>,
+      <strong>TensorFlow</strong>, and <strong>Keras</strong> to working with real-time data-driven applications
+      in the field of <strong>IoT</strong>. I'm equally comfortable on the web front-end, using
+      <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> to design responsive interfaces.
+      With tools like <strong>NumPy</strong> and <strong>Pandas</strong>, I love diving into data to discover patterns,
+      optimize models, and deliver meaningful insights. I’m always excited to work on impactful projects that
+      combine software, intelligence, and user-friendly design.
+    </p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div>Machine Learning</div>
+      <div>Internet of Things</div>
+      <div>Python</div>
+      <div>NumPy</div>
+      <div>Pandas</div>
+      <div>Scikit-Learn</div>
+      <div>TensorFlow</div>
+      <div>Keras</div>
+      <div>Google Colab</div>
+      <div>Jupyter Notebook</div>
+      <div>VS Code</div>
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <div>Git</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Currency Converter App</h3>
+      <p>A real-time currency converter built using JavaScript that fetches exchange rates using a public currency API and performs client-side conversion.</p>
+    </div>
+    <div class="project">
+      <h3>Hotel Booking Demand Prediction</h3>
+      <p>A machine learning model built using scikit-learn and pandas to predict hotel booking cancellations, improving hotel resource planning and marketing strategy.</p>
+    </div>
+    <div class="project">
+      <h3>Optimal Fertilizer Prediction</h3>
+      <p>A Kaggle-based machine learning model trained on soil and crop data to recommend the best fertilizer using Python and decision tree algorithms.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form name="submit-to-google-sheet">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="text" name="Phone" placeholder="Your Phone Number" required />
+      <input type="email" name="Email" placeholder="Your Email" required />
+      <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" />
+    </form>
+    <p id="msg"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 My Portfolio | Designed By <strong>Ayush Gupta</strong>
+  </footer>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxhsVJ8NuOtuZB3iCO1NzAHKZEOzAPT_IHAwLn6AW_H03CT7mfylvyI9XHe6Tzk1ubp/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Thank you! Your message has been sent.";
+          setTimeout(() => msg.innerHTML = "", 5000);
+          form.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          msg.innerHTML = "Error sending message. Try again later.";
+        });
+    });
+  </script>
+</body>
+</html>
+
